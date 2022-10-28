@@ -11,7 +11,7 @@ func ContainsElement(element any, targetslice []any) bool {
 }
 
 // find target element's index of element.
-func FindIndexOfElement(element any, targetslice ...any) int {
+func FindIndexOfElement(element any, targetslice []any) int {
 	for i, v := range targetslice {
 		if v == element {
 			return i
