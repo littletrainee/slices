@@ -1,7 +1,13 @@
 package slices
 
+type Type interface {
+	int | int8 | int16 | int32 | int64 |
+		uint | uint8 | uint16 | uint32 | uint64 |
+		float32 | float64
+}
+
 // check slice is contains element.
-func ContainsElement(element any, targetslice []any) bool {
+func ContainsElement[T Type](element T, targetslice []T) bool {
 	for _, v := range targetslice {
 		if v == element {
 			return true
@@ -11,7 +17,7 @@ func ContainsElement(element any, targetslice []any) bool {
 }
 
 // find target element's index of element.
-func FindIndexOfElement(element any, targetslice []any) int {
+func FindIndexOfElement[T Type](element T, targetslice []T) int {
 	for i, v := range targetslice {
 		if v == element {
 			return i
