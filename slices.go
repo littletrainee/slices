@@ -1,7 +1,7 @@
 package slices
 
 // check slice is contains element.
-func ContainsElement(element any, targetslice ...any) bool {
+func ContainsElement(element any, targetslice []any) bool {
 	for _, v := range targetslice {
 		if v == element {
 			return true
