@@ -8,7 +8,7 @@ type Type interface {
 }
 
 // check slice is contains element.
-func ContainsElement[T Type](element T, targetslice []T) bool {
+func ContainsElement[T Type](targetslice []T, element T) bool {
 	for _, v := range targetslice {
 		if v == element {
 			return true
@@ -18,7 +18,7 @@ func ContainsElement[T Type](element T, targetslice []T) bool {
 }
 
 // find target element's index of element.
-func FindIndexOfElement[T Type](element T, targetslice []T) int {
+func FindIndexOfElement[T Type](targetslice []T, element T) int {
 	for i, v := range targetslice {
 		if v == element {
 			return i
@@ -28,7 +28,7 @@ func FindIndexOfElement[T Type](element T, targetslice []T) int {
 }
 
 // count of the occurrences of element in target slice.
-func CountNumber[T Type](element T, targetslice []T) int {
+func CountNumber[T Type](targetslice []T, element T) int {
 	var count int
 	for _, v := range targetslice {
 		if v == element {
