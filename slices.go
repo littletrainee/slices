@@ -27,6 +27,7 @@ func FindIndexOfElement[T Type](element T, targetslice []T) int {
 	return -1
 }
 
+// count of the occurrences of element in target slice.
 func CountNumber[T Type](element T, targetslice []T) int {
 	var count int
 	for _, v := range targetslice {
